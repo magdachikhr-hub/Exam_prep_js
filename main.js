@@ -27,4 +27,46 @@ console.log(userOne.age);
 
 heading.innerHTML += "(some text)";
 
-heading.innerHTML += `hi this is ${userOne.name}`;
+heading.innerHTML += `hi this is ${userOne.name} `;
+
+// martivi if else
+let age2 = 30;
+let result2 = age2 > 18 ? "adult" : "minor";
+
+// Date();
+// Promise();
+// Math.random();
+// Math.abs();
+
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+array.forEach((user, i) => {
+  console.log(user.name, i);
+
+  const newDiv = document.createElement("div");
+  newDiv.textContent = user.name;
+
+  heading.append(newDiv);
+
+  console.log(heading.getAttribute("class"));
+  heading.setAttribute("class", "dark");
+});
+
+// function removeString(html) {
+//   html.textContent = "";
+// }
+
+// removeString(heading);
+
+// function removeString(html) {
+//   const text = (html.textContent += " hiiiiii");
+//   return text;
+// }
+
+removeString(heading);
+
+heading.addEventListener("click", (e) => {
+  console.log(e.target);
+});
