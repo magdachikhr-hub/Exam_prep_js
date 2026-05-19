@@ -82,3 +82,46 @@ array.forEach((user, i) => {
 heading.addEventListener("click", (e) => {
   console.log(e.target);
 });
+
+//
+
+async function getPost() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await response.json();
+    data.forEach((post) => {
+      console.log(post);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getPost();
+
+const userPost = {
+  userId: 45,
+  id: 67,
+  title: "this is the title",
+  body: "this is post",
+};
+
+async function sendPost() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userPost),
+    });
+    const res = await response.json();
+    console.log(res);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+sendPost();
+
+//form.data
