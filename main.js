@@ -1,3 +1,5 @@
+//jsonplaceholder.typicode.com/posts
+
 const heading = document.querySelector(".header");
 
 console.log(heading.innerHTML);
@@ -18,7 +20,16 @@ let array = [
     name: "natia",
     age: 23,
   },
+  {
+    name: "user3",
+    age: 17,
+  },
 ];
+
+array.find(() => {});
+const foundUser = array.find((user) => user.age < 18);
+
+console.log(foundUser);
 
 let userOne = array[0];
 
@@ -52,6 +63,7 @@ array.forEach((user, i) => {
 
   console.log(heading.getAttribute("class"));
   heading.setAttribute("class", "dark");
+  //   heading.classList.add("dark");
 });
 
 // function removeString(html) {
@@ -65,7 +77,7 @@ array.forEach((user, i) => {
 //   return text;
 // }
 
-removeString(heading);
+// removeString(heading);
 
 heading.addEventListener("click", (e) => {
   console.log(e.target);
