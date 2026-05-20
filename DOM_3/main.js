@@ -1,6 +1,7 @@
 // prompt("what is your name");
 // alert("reload");
 // confirm("agree or not");
+// console.log(prompt("hi"));
 
 //1.1,1.2,1.3,1.4
 
@@ -71,8 +72,7 @@ input.addEventListener("input", () => {
 });
 
 //3.1
-
-let arr = [
+const arr = [
   "ana",
   "nika",
   "elene",
@@ -92,6 +92,6 @@ for (let i = 0; i < arr.length; i++) {
   if (arr[i].length > 5) {
     longNames.push(arr[i]);
   }
-}
+} 
 
 console.log(longNames);
