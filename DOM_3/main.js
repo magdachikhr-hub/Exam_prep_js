@@ -1,25 +1,36 @@
-//1.1
+// prompt("what is your name");
+// alert("reload");
+// confirm("agree or not");
 
-const result = document.querySelector(".result");
+//1.1,1.2,1.3,1.4
+
+const outputHtml = document.querySelector(".output");
+
+const number1 = 50;
+const number2 = 45;
 
 function getSum() {
-  let number1 = 20;
-  let number2 = 40;
-
-  let sum = number1 + number2;
+  const sum = number1 + number2;
   console.log(sum);
-
-  result.innerHTML = `the sum is ` + sum;
+  return sum;
 }
 
 getSum();
 
+//meore gza // better one
+function getSum(a, b) {
+  const sum = a + b;
+  console.log(sum);
+  return sum;
+}
+const sumNumber = getSum(number1, number2);
+outputHtml.textContent = sumNumber;
+
 //2.1
+const age1 = 22;
+const age2 = 17;
 
-let age1 = 15;
-let age2 = 17;
-
-if (age1 > 18 && age2 > 18) {
+if (age1 >= 18) {
   console.log("adult");
 } else {
   console.log("underage");
@@ -46,7 +57,9 @@ const buttonText = document.querySelector(".buttonText");
 
 button.addEventListener("click", () => {
   console.log("clicked");
-  buttonText.innerHTML = `clicked`;
+  buttonText.textContent = `clicked`;
+
+  //we could also use alert
 });
 
 //2.4   js events
@@ -56,3 +69,29 @@ const inpt = document.getElementById(".input");
 input.addEventListener("input", () => {
   console.log(input.value);
 });
+
+//3.1
+
+let arr = [
+  "ana",
+  "nika",
+  "elene",
+  "diana",
+  "avtandili",
+  "nini",
+  "levani",
+  "nugzari",
+  "qetevani",
+  "zura",
+  "teona",
+];
+
+let longNames = [];
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i].length > 5) {
+    longNames.push(arr[i]);
+  }
+}
+
+console.log(longNames);
