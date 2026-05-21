@@ -51,6 +51,10 @@ console.log(twoArrs);
 twoArrs.sort((a, b) => a - b);
 console.log(twoArrs);
 
+for (const item of twoArrs) {
+  console.log(item);
+}
+
 //for? of?
 
 //4.1
