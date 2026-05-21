@@ -2,3 +2,10 @@ button.text {
   width: 80px;
   height: 20px;
 }
+
+.round {
+  background-color: brown;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

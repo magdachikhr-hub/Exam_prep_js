@@ -271,7 +271,7 @@ const output = document.querySelector(".output");
 async function getPosts() {
   try {
     const response = await fetch(
-      "https://jsonplaceholder.typicode.com/posts?_limit=5",
+      "https://jsonplaceholder.typicode.com/posts?_limit=5"
     );
     const data = await response.json();
     console.log(data);
