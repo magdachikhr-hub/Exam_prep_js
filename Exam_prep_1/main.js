@@ -227,3 +227,43 @@ paragraph.addEventListener("click", () => {
 nameInput.addEventListener("blur", () => {
   console.log("it is blur");
 });
+
+//6.1
+
+const post = {
+  userId: 56,
+  id: 100,
+  title: "this is the title",
+  body: "quo iurevoluptatem occaecati omnis eligendi a",
+};
+
+async function userPost() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(post),
+    });
+
+    const data = await response.json();
+    console.log(data);
+    //i added
+    output.innerHTML = `
+      <h3>${data.title}</h3>
+      <p>${data.body}</p>
+      <p>UserId: ${data.userId}</p>
+    `;
+    //
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+userPost();
+
+//i added
+const output = document.querySelector(".output");
+
+//6.2
