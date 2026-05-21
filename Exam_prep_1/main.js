@@ -267,3 +267,17 @@ userPost();
 const output = document.querySelector(".output");
 
 //6.2
+
+async function getPosts() {
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/posts?_limit=5",
+    );
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getPosts();
